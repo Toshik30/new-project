@@ -1,0 +1,18 @@
+@import "vars";
+@import "libs";
+@import "fonts";
+
+
+p {
+	font-size: 25px;
+	color: red;
+	font-family: "Euphoria", cursive;
+}
+
+h1 {
+	color: blue;
+	font-family: "Open Sans", sans-serif;
+}
+
+
+@import "media";
