@@ -9,6 +9,14 @@
 }
 
 @font-face {
-	font-family: "Roboto";
-	src: url("/fonts/Roboto-Regular.fft") format("opentype")
+	font-family: "Open Sans Bold";
+	src: url("../fonts/OpenSans-Bold.ttf") format("opentype");
 }
+
+@font-face {
+	font-family: "Roboto";
+	src: url("/fonts/Roboto-Regular.fft") format("opentype");
+}
+
+
+//add roboto black same as open sans
