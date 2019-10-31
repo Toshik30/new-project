@@ -367,4 +367,203 @@ h4 {
 	}
 }
 
+.travel-us {
+	background:url(/images/worldmap-dots.png) 40% 0%/1469px no-repeat, url(/images/Group_65.png) 69% 100%/1920px no-repeat;height: 1010px;
+	.container {
+		height: 1010px;
+		margin-top: 40px;
+	}
+	.place {
+	width: 200px;
+	height: 382px;
+	border-radius: 3px;
+	}
+	.carpathian {
+	background: url(/images/Layer_108.png) no-repeat, #eee;
+	}
+	.alps {
+		background: url(/images/Layer_109.png) no-repeat, #eee;
+	}
+	.pyrenees {
+		background: url(/images/Layer_111.png) no-repeat, #eee;
+	}
+	.rocky {
+		background: url(/images/Layer_116.png) no-repeat, #eee;
+	}
+	.kavkaz {
+		background: url(/images/Layer_117.png) no-repeat, #eee;
+	}
+	h4 {
+		font-size: 28px;
+		margin: 110px 15px 10px;
+		text-transform: uppercase;
+		columns: white;
+		font-weight: 400;
+		letter-spacing: -.03px;	
+	}
+	p {
+		font-size: 16px;
+		color: white;
+		margin: 0 15px;
+	}
+	.price {
+		width: 200px;
+		height: 62px;
+		background-color: rgba(0,0,0,.2);
+		position: absolute;
+		bottom: 0;
+		padding: 20px 15px;
+		color: white;
+		display: flex;
+		justify-content: space-between;
+
+	}
+
+}
+.gallery {
+	.row {
+		margin-top: 40px;
+		flex-wrap: nowrap;
+	}
+	img {
+		margin-bottom: 30px;
+	}
+}
+.sites {
+	background-color:black;
+	
+	.container {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+	}
+	img {
+		padding:65px;
+	}
+}
+.clients {
+    background: url(/images/bg.png) center calc(100% + 120px)/120% 1135px no-repeat, url(/images/vid.png) center bottom/120% no-repeat;
+    margin-bottom: 0;
+    img {
+    	padding: 10px 0;
+    }
+    p {
+    	color: #bcbcbc;
+    	font-size: 18px;
+    	font-weight: 400;
+    }
+    .pavliv:after {
+	content: "Pavliv Yaroslav Web designer";
+	color: #36aeea;
+	}
+	.john:after {
+		content: "Jonh Scott The Fringe ";
+		color: #36aeea;
+	}
+    .container {
+    	height: 1090px;
+    }
+    .row {
+    	margin-bottom: 60px;
+    }
+}
+
+.write-info {
+	width: 515px;
+	padding: 20px 0 40px;
+	background-color: rgba(251,251,251,.23);
+	backdrop-filter: blur(3px);
+	margin: auto;
+	border-radius: 5px;
+
+	input {
+		width: 90%;
+		margin: 20px 25px;
+		color: #cccccc;
+		font-family: "Roboto" sans-serif;
+		font-size: 18px;
+		font-weight: 400;
+	}
+
+	button {
+		padding:20px;
+		width: 90%;
+		margin: 0 25px;
+		font-size: 16px;
+		letter-spacing: 2.56px;
+		font-weight: 700;
+	}
+	.registration {
+		text-align: center;
+		p {
+			color: #383e4a;
+			font-size: 16px;
+			font-weight: 400;
+		}
+		b {
+			color: #383e4a;
+			font-size: 36px;
+			font-weight: 700;
+			letter-spacing: 3.6px;
+			text-transform: uppercase;
+		}
+	}
+}
+.footer {
+	background: url(/images/bg.png) center calc(100% + 100px)/120% 3000px no-repeat;
+
+	span {
+		color: #ffffff;
+		font-family: "Roboto" sans-serif;
+		font-size: 27px;
+		font-weight: 400;
+		opacity: 0.7;
+	}
+
+	p {
+		color: #ffffff;
+		font-size: 18px;
+		font-weight: 400;
+		opacity: 0.7;
+	}
+
+	.container {
+		display: flex;
+		justify-content: space-between;
+		padding: 20px 0;
+	}
+	.messagers {
+		display: flex;
+
+		.tw {
+			background-color: #29c5f6;
+			width: 40px;
+			height: 41px;
+			margin-right: 3px;
+			display: flex;
+		    align-items: center;
+		    justify-content: center;
+		}
+		.fb  {
+			background-color:  #6788ce;
+			width: 40px;
+			height: 41px;
+			margin-right: 3px;
+			display: flex;
+		    align-items: center;
+		    justify-content: center;
+		}
+		.vk {  
+			background-color: #54769a;
+			width: 40px;
+			height: 41px;
+			display: flex;
+		    align-items: center;
+		    justify-content: center;
+		}
+
+	}
+	
+}
+
 @import "media";
