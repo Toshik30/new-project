@@ -2,16 +2,12 @@
 @import "libs";
 @import "fonts";
 
-* {
-	box-sizing: border-box; // remove
-}
-
 body {
 	font-family: "Open Sans", sans-serif;
 }
 
 section {
-	margin: 80px 0; // replace with padding
+	padding:  80px 0; // replace with padding
 }
 
 h2, h3 {
@@ -20,7 +16,7 @@ h2, h3 {
 
 h2 {
 	position: relative;
-	text-align: -webkit-center; // why webkit?
+	text-align: center; 
 }
 
 h2:before {
@@ -28,9 +24,12 @@ h2:before {
     left: calc(50% - 47px)
 }
 
-h2, h3, h4 {
+h2, h3 {
 	text-transform: uppercase;
 	font-weight: 700;
+	font-family: "Open Sans Bold";
+	color: #2c2e37;
+
 }
 
 h2:before, h3:before {
@@ -46,22 +45,30 @@ h3:before {
 }
 
 h3 {
+	letter-spacing: 1px;
 	font-size: 20px;
 	position: relative;
 }
 
 h4 {
 	font-size: 16px;
+	text-transform: uppercase;
+	font-family: "Open Sans Bold";
 	letter-spacing: 2.55px;
 	margin: 40px 0;
+}
+
+.btn-outline-primary {
+    color: #36aeea;
+	border: 3px solid #36aeea;
 }
 
 .btn-primary {
 	text-transform: uppercase;
 	font-weight: 700;
 	background-color: #36aeea;
-	border: 3px solid #36aeea;
 	letter-spacing: 2px;
+	border: none;
 }
 
 .head {
@@ -80,9 +87,8 @@ h4 {
 				font-weight: 700;
 				color: #9daeb6;
 			}
-			.btn-outline-success {
+			.btn-outline-primary {
 			    color: #36aeea;
-			    
 				border: 3px solid #36aeea;
 				font-size: 12px;
 				letter-spacing: 1.92px;
@@ -145,16 +151,14 @@ h4 {
 	}
 }
 .about-us {
-	background: url(/images/vector.png)100% no-repeat, #f6f4f4;
+	background: url(/images/vector.png)calc(50% + 150px) center no-repeat, #f6f4f4;
 	position: relative;
-	background-size: auto;
-	background-position: 70% 20%;
 	margin: 0;
 	
 
 	button {
 		font-size: 12px;
-		padding: 5px 20px;
+		padding: 1em 2em;
 	}
 	p {
 		color:#949494;
@@ -180,7 +184,7 @@ h4 {
 	    left: 47%;
 	}
 	.container {
-		min-height: 620px;
+		min-height: 660px;
 		display: flex;
 	}
 	.read-more {
@@ -219,24 +223,20 @@ h4 {
 			color: #16b5ef;
 		}
 		.love {
-			background: url(/images/love.png) no-repeat, url(/images/heart2.png)no-repeat center, #000;
-			width: 379px;
-			height: 380px;
-			position: relative;
+			background:url(/images/heart2.png)no-repeat center, url(/images/love.png) no-repeat, #bab7d9;
+
 		}
 		.tree {
-			background: url(/images/tree.png) no-repeat, url(/images/Vector_Smart_Object.png)no-repeat center, #000;
-			width: 381px;
-			height: 380px;
+			background: url(/images/Vector_Smart_Object.png)no-repeat center, url(/images/tree.png) no-repeat, #bab7d9;
+
 		}
 		.water {
-			background: url(/images/water.png) no-repeat, url(/images/Vector_Smart_Object1.png)no-repeat center, #000;
-			width: 380px;
-			height: 380px;
+			background: url(/images/Vector_Smart_Object1.png)no-repeat center,url(/images/water.png) no-repeat,  #bab7d9;
+
 		}
 		.row {
-			margin-top: 60px;
-			margin-bottom: 60px;
+			margin: 60px 0;
+			box-shadow: 6px -4px 20px -10px;
 		}
 		.love {
 			&:before { // move all cascades to scss
@@ -250,29 +250,32 @@ h4 {
 			    transform: rotate(45deg);
 			}
 		}
-		.tree:before {
-			content: "";
-		    height: 15px;
-		    width: 15px;
-		    position: absolute;
-		    background-color: #fff;
-		    left: -2%;
-		    top: 15%;
-		    transform: rotate(45deg);
+		.tree {
+			&:before {
+				content: "";
+			    height: 15px;
+			    width: 15px;
+			    position: absolute;
+			    background-color: #fff;
+			    left: -2%;
+			    top: 15%;
+			    transform: rotate(45deg);
+			}
 		}
-		.water:before {
-			content: "";
-		    height: 15px;
-		    width: 15px;
-		    position: absolute;
-		    background-color: #fff;
-		    bottom: -2%;
-		    left: 13%;
-		    transform: rotate(45deg);
+
+		.water{
+			&:before {
+				content: "";
+			    height: 15px;
+			    width: 15px;
+			    position: absolute;
+			    background-color: #fff;
+			    bottom: -2%;
+			    left: 13%;
+			    transform: rotate(45deg);
+			}
 		}
-		.row {
-			box-shadow: 6px -4px 20px -10px;
-		}
+
 	}
 }
 .wanna-go {
@@ -301,17 +304,17 @@ h4 {
 		a {
 			position: absolute;
 			text-indent: 25px;
+			&:before {
+				content: "";
+			    background: url(/images/lock_locked.png) 100% no-repeat;
+			    position: absolute;
+			    height: 21px;
+			    width: 21px;
+			    left: -5px;
+			}
 		}
 
-		a:before {
-			content: "";
-		    background: url(/images/lock_locked.png) 100% no-repeat;
-		    position: absolute;
-		    height: 21px;
-		    width: 21px;
-		    left: -5px;
-		}
-		
+
 		p {
 			color: #949494;
 			font-size: 14px;
@@ -321,19 +324,19 @@ h4 {
 }
 .work {
 		.count {
-		width: 48px;
-	    height: 48px;
-	    border-radius: 50%;
-	    border: 3px solid #36aeea;
-	    color: #36aeea;
-	    font-weight: 700;
-	    background-color: #ffffff;
-	    display: inline-flex;
-	    align-items: center;
-	    justify-content: center;
+			width: 48px;
+		    height: 48px;
+		    border-radius: 50%;
+		    border: 3px solid #36aeea;
+		    color: #36aeea;
+		    font-weight: 700;
+		    background-color: #ffffff;
+		    display: inline-flex;
+		    align-items: center;
+		    justify-content: center;
 	}
+
 	.icon {
-		width: 179px;
 		height: 179px;
 		background: url(/images/Polygon.png) center no-repeat,  #f0f3f6;
 		border-radius: 50%;
@@ -357,19 +360,33 @@ h4 {
 	.row {
 		position: relative;
 		margin-top: 40px ;
+
+		&:before {
+			content: "";
+			width: calc(100% - 244px);
+			height: 2px;
+			background: url(/images/border.png);
+			display: block;
+			position: absolute;
+			top: 23px;
+			left: 122px;
+		}
 	}
-	.row:before {
-		content: "";
-		width: calc(100% - 244px);
-		height: 2px;
-		background: url(/images/border.png);
-		display: block;
-		position: absolute;
-		top: 23px;
-		left: 122px;
-	}
+
 	.col-md-2 {
 		padding: 0;
+
+		&:after {
+			content: "";
+			width: 80px;
+			height: 2px;
+			background: url(/images/border.png);
+			display: block;
+			position: absolute;
+			top: 89px;
+			left: 52px;
+			transform: rotate(90deg);
+		}
 	}
 }
 
@@ -402,11 +419,11 @@ h4 {
 	.kavkaz {
 		background: url(/images/Layer_117.png) no-repeat, #eee;
 	}
-	h4 {
+	strong {
 		font-size: 28px;
-		margin: 110px 15px 10px;
-		text-transform: uppercase;
-		columns: white; //fix
+		padding: 110px 15px 10px;
+    	display: flex;
+		color: white; //fix
 		font-weight: 400;
 		letter-spacing: -.03px;	
 	}
@@ -451,74 +468,83 @@ h4 {
 	}
 }
 .clients {
-    background: url(/images/bg.png) center calc(100% + 120px)/120% 1135px no-repeat, url(/images/vid.png) center bottom/120% no-repeat;
+    background: url(/images/bg.png) center calc(86% + 120px)/120% 1135px no-repeat, url(/images/vid.png) top /120% 120% no-repeat;
     margin-bottom: 0;
+
     img {
     	padding: 10px 0;
     }
+
     p {
     	color: #bcbcbc;
     	font-size: 18px;
     	font-weight: 400;
     }
+
     .pavliv:after {
 	content: "Pavliv Yaroslav Web designer";
 	color: #36aeea;
 	}
+
 	.john:after {
 		content: "Jonh Scott The Fringe ";
 		color: #36aeea;
 	}
+
     .container {
-    	height: 1090px;
-    }
+    	padding: 140px 0;
+
+    	.write-info {
+					width: 515px;
+					padding: 20px 0 40px;
+					background-color: rgba(251,251,251,.23);
+					backdrop-filter: blur(3px);
+					margin: auto;
+					border-radius: 5px;
+
+				input {
+					width: 90%;
+					margin: 20px 25px;
+					padding: 1.5em 1em;
+					color: #cccccc;
+					font-family: "Roboto" ;
+					font-size: 18px;
+					font-weight: 400;
+					// fix outline
+				}
+
+				button {
+					padding:20px;
+					width: 90%;
+					margin: 0 25px;
+					font-size: 16px;
+					letter-spacing: 2.56px;
+					font-weight: 700;
+				}
+				.registration {
+					text-align: center;
+					p {
+						color: #383e4a;
+						font-size: 16px;
+						font-weight: 400;
+					}
+					b {
+						color: #36aeea;
+						font-family: "Open Sans Bold";
+						font-size: 36px;
+						letter-spacing: 3.6px;
+						text-transform: uppercase;
+					}
+				}
+			}
+    	}
+
     .row {
     	margin-bottom: 60px;
     }
 }
 
-.write-info {
-	width: 515px;
-	padding: 20px 0 40px;
-	background-color: rgba(251,251,251,.23);
-	backdrop-filter: blur(3px);
-	margin: auto;
-	border-radius: 5px;
 
-	input {
-		width: 90%;
-		margin: 20px 25px;
-		color: #cccccc;
-		font-family: "Roboto" sans-serif;
-		font-size: 18px;
-		font-weight: 400;
-		// fix outline
-	}
-
-	button {
-		padding:20px;
-		width: 90%;
-		margin: 0 25px;
-		font-size: 16px;
-		letter-spacing: 2.56px;
-		font-weight: 700;
-	}
-	.registration {
-		text-align: center;
-		p {
-			color: #383e4a;
-			font-size: 16px;
-			font-weight: 400;
-		}
-		b {
-			color: #383e4a;
-			font-size: 36px;
-			font-weight: 700;
-			letter-spacing: 3.6px;
-			text-transform: uppercase;
-		}
-	}
-}
 .footer {
 	background: url(/images/bg.png) center calc(100% + 100px)/120% 3000px no-repeat;
 
