@@ -7,7 +7,7 @@ body {
 }
 
 section {
-	padding:  80px 0; // replace with padding
+	padding-bottom:  80px ; // replace with padding
 }
 
 h2, h3 {
@@ -17,6 +17,8 @@ h2, h3 {
 h2 {
 	position: relative;
 	text-align: center; 
+	margin-top: 80px;
+
 }
 
 h2:before {
@@ -57,6 +59,12 @@ h4 {
 	letter-spacing: 2.55px;
 	margin: 40px 0;
 }
+h5 {
+	font-family: "Roboto Black";
+	font-weight: 400;
+	font-size: 18px;
+	color: #2c2e37;
+}
 
 .btn-outline-primary {
     color: #36aeea;
@@ -72,9 +80,8 @@ h4 {
 }
 
 .head {
-	background: url(/images/background_image.png) center top / cover no-repeat; //make more lighter
-	height: 760px;
-	margin: 0;
+	background: url(/images/background_image.png) center top / 2250px no-repeat; //make more lighter
+	padding: 0;
 	
 	header {
 		background-color: rgba(245, 245, 245, 0.23);
@@ -113,9 +120,11 @@ h4 {
 		}
 
 	}
+	.stab {
+		padding: 150px 0;
+	}
 	.order {
 	border: 2px solid white;
-    margin: 130px auto;
     padding: 10px 40px 45px;
     	
     	h1 {
@@ -151,9 +160,9 @@ h4 {
 	}
 }
 .about-us {
-	background: url(/images/vector.png)calc(50% + 150px) center no-repeat, #f6f4f4;
+	background: url(/images/vector.png)calc(50% + 150px) calc(50% + -60px) no-repeat, #f6f4f4;
 	position: relative;
-	margin: 0;
+	padding: 0;
 	
 
 	button {
@@ -280,7 +289,7 @@ h4 {
 }
 .wanna-go {
 	padding: 140px 0;
-	background: url(/images/elkablur.png)92% 100%/449px no-repeat,url(/images/Layer_10_copy.png)100% 100%/188px no-repeat, url(/images/elka.png)75% 100%/269px no-repeat, url(/images/gori.png)0% 100%/1270px no-repeat, #f6f4f4;
+	background: url(/images/elkablur.png)92% 100%/449px no-repeat,url(/images/Layer_10_copy.png)100% 100%/188px no-repeat, url(/images/elka.png)75% 100%/269px no-repeat, url(/images/gori.png)left bottom/ calc(60% - -100px) no-repeat, #f6f4f4;
 
     .container {
     	height: 350px;
@@ -301,9 +310,11 @@ h4 {
 			border: 0;
 		}
 
-		a {
+		span {
 			position: absolute;
 			text-indent: 25px;
+			color: #36aeea;
+
 			&:before {
 				content: "";
 			    background: url(/images/lock_locked.png) 100% no-repeat;
@@ -345,12 +356,7 @@ h4 {
 		justify-content: center;
 		margin: 70px 0 30px;
 	}
-	h5 {
-		font-size: 15px;
-		font-weight: 500;
-		font-family: "Roboto", sans-serif;
 
-	}
 	p {
 		font-size: 13px;
 		font-weight: 300;
@@ -384,7 +390,7 @@ h4 {
 			display: block;
 			position: absolute;
 			top: 89px;
-			left: 52px;
+			left: 58px;
 			transform: rotate(90deg);
 		}
 	}
@@ -442,6 +448,17 @@ h4 {
 		color: white;
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
+
+		b {
+			font-size: 26px;
+			font-family: "Open Sans Extrabold";
+			font-weight: 400;
+		}
+		s {
+			font-size: 18px;
+			font-weight: 400;
+		}
 
 	}
 
@@ -471,28 +488,37 @@ h4 {
     background: url(/images/bg.png) center calc(86% + 120px)/120% 1135px no-repeat, url(/images/vid.png) top /120% 120% no-repeat;
     margin-bottom: 0;
 
-    img {
-    	padding: 10px 0;
+    .pavliv, .john {
+    	color: #36aeea;
     }
 
-    p {
+    img {
+    	padding: 10px 5px;
+    }
+    .row {
+	    p {
     	color: #bcbcbc;
     	font-size: 18px;
     	font-weight: 400;
+    	position: relative;
+
+			&:before {
+			    content: "";
+			    background: url(/images/skobka.png) no-repeat;
+			    position: absolute;
+			    width: 25px;
+			    height: 40px;
+			    top: -30px;
+			}
+    	}
     }
-
-    .pavliv:after {
-	content: "Pavliv Yaroslav Web designer";
-	color: #36aeea;
-	}
-
-	.john:after {
-		content: "Jonh Scott The Fringe ";
-		color: #36aeea;
-	}
-
-    .container {
+     .container {
     	padding: 140px 0;
+    }
+}
+
+
+   
 
     	.write-info {
 					width: 515px;
@@ -537,12 +563,12 @@ h4 {
 					}
 				}
 			}
-    	}
+    	
 
     .row {
     	margin-bottom: 60px;
     }
-}
+
 
 
 .footer {
