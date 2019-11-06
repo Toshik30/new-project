@@ -7,7 +7,10 @@ body {
 }
 
 section {
-	padding-bottom:  80px ; // replace with padding
+	padding: 70px 0; // replace with padding
+}
+input {
+	outline:none;
 }
 
 h2, h3 {
@@ -17,8 +20,7 @@ h2, h3 {
 h2 {
 	position: relative;
 	text-align: center; 
-	margin-top: 80px;
-
+	margin-top: 40px;
 }
 
 h2:before {
@@ -31,7 +33,6 @@ h2, h3 {
 	font-weight: 700;
 	font-family: "Open Sans Bold";
 	color: #2c2e37;
-
 }
 
 h2:before, h3:before {
@@ -43,13 +44,14 @@ h2:before, h3:before {
 }
 
 h3:before {
-    top: -30px
+    top: -30px;
 }
 
 h3 {
 	letter-spacing: 1px;
 	font-size: 20px;
 	position: relative;
+	margin-top: 32px;
 }
 
 h4 {
@@ -67,14 +69,14 @@ h5 {
 }
 
 .btn-outline-primary {
-    color: #36aeea;
-	border: 3px solid #36aeea;
+    color: $base-color;
+	border: 3px solid $base-color;
 }
 
 .btn-primary {
 	text-transform: uppercase;
 	font-weight: 700;
-	background-color: #36aeea;
+	background-color: $base-color;
 	letter-spacing: 2px;
 	border: none;
 }
@@ -86,97 +88,112 @@ h5 {
 	header {
 		background-color: rgba(245, 245, 245, 0.23);
 
-			li {
-				cursor: pointer;
-				display: flex;
-				text-transform: uppercase;
-				font-size: 12px;
-				font-weight: 700;
-				color: #9daeb6;
-			}
-			.btn-outline-primary {
-			    color: #36aeea;
-				border: 3px solid #36aeea;
-				font-size: 12px;
-				letter-spacing: 1.92px;
-				padding: 10px 45px;
-				text-transform: uppercase;
-				font-weight: 700;
-			}
+		li {
+			cursor: pointer;
+			display: flex;
+			text-transform: uppercase;
+			font-size: 12px;
+			font-weight: 700;
+			color: #9daeb6;
+		}
+		.btn-outline-primary {
+		    color: $base-color;
+			border: 3px solid $base-color;
+			font-size: 12px;
+			letter-spacing: 1.92px;
+			padding: 10px 45px;
+			text-transform: uppercase;
+			font-weight: 700;
+		}
 
-			.logo {
+		.logo {
 			font-family: "Euphoria";
 			font-size: 29px;
 			font-weight: 700;
 			margin: 15px 20px 0px 0px;
 
 			p {
-				color: #36aeea;
+				color: $base-color;
 			}
 			b {
 				color: #95a5ad;
 			}
-
 		}
-
 	}
 	.stab {
 		padding: 150px 0;
 	}
 	.order {
-	border: 2px solid white;
-    padding: 10px 40px 45px;
+		border: 2px solid $white-color;
+	    padding: 10px 40px 45px;
+	    border-top: none;
+	    position: relative;
+
+    	&:before, &:after {
+    		content: "";
+    		display: block;
+    		position: absolute;
+    		height: 2px;
+    		background: $white-color;
+    		top: 0;
+    	}
+    	&:before {
+    		left: 0;
+    		width: 71.5%;
+    	}
+    	&:after {
+    		right: 0;
+    		width: 11.5%;
+    	}
     	
     	h1 {
     		font-size: 50px;
     		letter-spacing: 3px;
-    		color: white;
+    		color: $white-color;
     		width: 100%;
     		text-transform: uppercase;
     		font-weight: 700;
     		p {
     			font-family: "Euphoria";
-    			color: #36aeea;
+    			color: $base-color;
     			font-size: 66px;
     			margin: -33px 0;
     			letter-spacing: 0;
     			text-transform: none;
     			font-weight: 600;
-    			
     		}
     	}
     	
     	p {
     		font-size: 18px;
     		font-weight: 400;
-    		color: #ffffff;
+    		color: $white-color;
     		width: 40%;
     	}
-    	
     	button {
-    		padding: 15px 75px;
+    		padding: 1.5em 75px;
     		font-size: 14px;
     	}
 	}
 }
 .about-us {
-	background: url(/images/vector.png)calc(50% + 150px) calc(50% + -60px) no-repeat, #f6f4f4;
+	background: url(/images/vector.png)calc(50% + 150px) calc(50% + -35px) no-repeat, #f6f4f4;
 	position: relative;
 	padding: 0;
-	
 
 	button {
 		font-size: 12px;
 		padding: 1em 2em;
 	}
 	p {
-		color:#949494;
-		width: 31%;
-		font-size: 14px;
+		color: $grey-color;
+		max-width: 340px;
+	    font-size: 14px;
+	    line-height: 26px;
 	}
 
 	.curves {
-		background: #fff url(/images/Curves.png) no-repeat;
+		background: $white-color url(/images/Curves.png) no-repeat;
 	    height: 570px;
 	    width: 806px;
 	    position: absolute;
@@ -185,7 +202,7 @@ h5 {
 	}
 
 	.nogi {
-		background: #fff url(/images/nogi.png) no-repeat;
+		background: $white-color url(/images/nogi.png) no-repeat;
 	    height: 350px;
 	    width: 350px;
 	    position: absolute;
@@ -201,7 +218,6 @@ h5 {
     	flex-direction: column;
     	justify-content: center;
     	align-items:end;
-
 	}
 }
 
@@ -213,7 +229,7 @@ h5 {
 			min-width: 379px;
 			position: relative;
 			height:380px;
-			text-align: -webkit-center;
+			text-align: center;
 			padding: 35px ;
 
 		}
@@ -253,7 +269,7 @@ h5 {
 			    height: 15px;
 			    width: 15px;
 			    position: absolute;
-			    background-color: #fff;
+			    background-color: $white-color;
 			    right: -2%;
 			    top: 15%;
 			    transform: rotate(45deg);
@@ -265,7 +281,7 @@ h5 {
 			    height: 15px;
 			    width: 15px;
 			    position: absolute;
-			    background-color: #fff;
+			    background-color: $white-color;
 			    left: -2%;
 			    top: 15%;
 			    transform: rotate(45deg);
@@ -278,7 +294,7 @@ h5 {
 			    height: 15px;
 			    width: 15px;
 			    position: absolute;
-			    background-color: #fff;
+			    background-color: $white-color;
 			    bottom: -2%;
 			    left: 13%;
 			    transform: rotate(45deg);
@@ -313,7 +329,7 @@ h5 {
 		span {
 			position: absolute;
 			text-indent: 25px;
-			color: #36aeea;
+			color: $base-color;
 
 			&:before {
 				content: "";
@@ -325,42 +341,40 @@ h5 {
 			}
 		}
 
-
 		p {
-			color: #949494;
+			color: $grey-color;
 			font-size: 14px;
 		}
     }
 
 }
 .work {
+	padding-bottom: 0;
 		.count {
 			width: 48px;
 		    height: 48px;
 		    border-radius: 50%;
-		    border: 3px solid #36aeea;
-		    color: #36aeea;
+		    border: 3px solid $base-color;
+		    color: $base-color;
 		    font-weight: 700;
-		    background-color: #ffffff;
+		    background-color: $white-color;
 		    display: inline-flex;
 		    align-items: center;
 		    justify-content: center;
 	}
 
 	.icon {
+		@extend %flex-center;
 		height: 179px;
 		background: url(/images/Polygon.png) center no-repeat,  #f0f3f6;
 		border-radius: 50%;
-		display: flex;
-		align-items: center;
-		justify-content: center;
 		margin: 70px 0 30px;
 	}
 
 	p {
 		font-size: 13px;
 		font-weight: 300;
-		color: #949494;
+		color: $grey-color;
 		font-family: "Roboto", sans-serif;
 	}
 	.row {
@@ -397,21 +411,43 @@ h5 {
 }
 
 .travel-us {
-	background:url(/images/worldmap-dots.png) 40% 0%/1469px no-repeat, url(/images/Group_65.png) 69% 100%/1920px no-repeat;height: 1010px;
+	background:url(/images/worldmap-dots.png) 40% 16%/1469px no-repeat, url(/images/Group_65.png) 60% calc(100% - 70px)/1920px no-repeat;
+
 	.container {
-		height: 1010px;
-		margin-top: 40px;
+		   padding: 100px 0 360px;
 	}
 
+	.rating {
+    	
+    	&:before {
+    		content: "";
+    		height: 32px;
+    		background: url(/images/5zve.png);
+    		position: absolute;
+    		width: 108px;
+    	}
+	}
 //make rating stars by bg-image with repeat
-
 	.place {
-	width: 200px;
-	height: 382px;
-	border-radius: 3px;
+		width: 200px;
+		height: 382px;
+		border-radius: 3px;
 	}
 	.carpathian {
 		background: url(/images/Layer_108.png) no-repeat, #eee;
+			.rating {
+    	
+    		&:before {
+	    		content: "";
+	    		height: 32px;
+	    		background: url(/images/5zve.png);
+	    		position: absolute;
+	    		width: 88px;
+    		}
+    		&:hover {
+    			background: blue;
+    		}
+		}
 	}
 	.alps {
 		background: url(/images/Layer_109.png) no-repeat, #eee;
@@ -424,18 +460,29 @@ h5 {
 	}
 	.kavkaz {
 		background: url(/images/Layer_117.png) no-repeat, #eee;
+
+		.rating {
+    	
+    		&:before {
+	    		content: "";
+	    		height: 32px;
+	    		background: url(/images/5zve.png);
+	    		position: absolute;
+	    		width: 68px;
+    		}
+		}
 	}
 	strong {
 		font-size: 28px;
-		padding: 110px 15px 10px;
+		padding: 150px 15px 10px;
     	display: flex;
-		color: white; //fix
+		color: $white-color; //fix
 		font-weight: 400;
 		letter-spacing: -.03px;	
 	}
 	p {
 		font-size: 16px;
-		color: white;
+		color: $white-color;
 		margin: 0 15px;
 	}
 	.price {
@@ -445,7 +492,7 @@ h5 {
 		position: absolute;
 		bottom: 0;
 		padding: 20px 15px;
-		color: white;
+		color: $white-color;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -459,11 +506,10 @@ h5 {
 			font-size: 18px;
 			font-weight: 400;
 		}
-
 	}
-
 }
 .gallery {
+	padding-top: 0;
 	.row {
 		margin-top: 40px;
 		flex-wrap: nowrap;
@@ -474,6 +520,7 @@ h5 {
 }
 .sites {
 	background-color:black;
+	padding: 0;
 	
 	.container {
 		display: flex;
@@ -489,7 +536,7 @@ h5 {
     margin-bottom: 0;
 
     .pavliv, .john {
-    	color: #36aeea;
+    	color: $base-color;
     }
 
     img {
@@ -555,7 +602,7 @@ h5 {
 						font-weight: 400;
 					}
 					b {
-						color: #36aeea;
+						color: $base-color;
 						font-family: "Open Sans Bold";
 						font-size: 36px;
 						letter-spacing: 3.6px;
@@ -575,7 +622,7 @@ h5 {
 	background: url(/images/bg.png) center calc(100% + 100px)/120% 3000px no-repeat;
 
 	span {
-		color: #ffffff;
+		color: $white-color;
 		font-family: "Roboto" sans-serif;
 		font-size: 27px;
 		font-weight: 400;
@@ -583,7 +630,7 @@ h5 {
 	}
 
 	p {
-		color: #ffffff;
+		color: $white-color;
 		font-size: 18px;
 		font-weight: 400;
 		opacity: 0.7;
