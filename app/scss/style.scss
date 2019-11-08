@@ -675,4 +675,67 @@ h5 {
 	
 }
 
+
 @import "media";
+
+@media  (max-width: 768px) {
+	section {
+		    margin-right: -50px;
+	}
+	header {
+		padding: 0;
+	}
+	.head {
+	   background: url(/images/background_image.png) 48% 2%/1327px no-repeat;
+
+	   .stab {
+	   		padding: 50px 0 ;
+	   }
+	   .order {
+	   		padding: 5px 10px;
+
+	   		button {
+		   		padding: 1em 55px;
+    			margin-bottom: 10px;
+			}
+	   }
+	   .travel {
+	   		h1 {
+	   			font-size: 	40px;
+	   			margin: 10px;
+	   			p {
+	   				font-size: 	50px;
+	   				margin: -25px 0;
+	   			}
+   			}
+		   	p {
+		   		margin: 25px 0;
+		   	}
+		}
+	}
+		.about-us {
+		background: url(/images/vector.png) calc(50% + 80px) calc(50% + -5px) no-repeat,#f6f4f4;
+
+		.curves {
+			background: #fff url(/images/Curves.png)center center no-repeat;
+		    height: 440px;
+		    width: 440px;
+		    top: -60px;
+		    left: 57%;
+		}
+		.nogi {
+			background: #fff url(/images/nogi.png) center bottom no-repeat;
+			height: 220px;
+			width: 220px;
+			top: 290px;
+		}
+		.container {
+			min-height: 540px;
+		}
+	}
+
+}
+
+
+
+
