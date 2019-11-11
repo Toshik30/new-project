@@ -198,7 +198,7 @@ h5 {
 	    width: 806px;
 	    position: absolute;
 	    top: -45px;
-	    left: 51%;
+	    right: 10%;
 	}
 
 	.nogi {
@@ -520,15 +520,9 @@ h5 {
 }
 .sites {
 	background-color:black;
-	padding: 0;
 	
 	.container {
-		display: flex;
-		justify-content: space-between;
-		align-items: flex-end;
-	}
-	img {
-		padding:65px;
+		@extend  %flex-between;
 	}
 }
 .clients {
@@ -678,7 +672,7 @@ h5 {
 
 @import "media";
 
-@media  (max-width: 768px) {
+@media (max-width: 768px) {
 	section {
 		    margin-right: -50px;
 		    padding: 20px 0;
@@ -722,7 +716,7 @@ h5 {
 		    height: 350px;
 		    width: 352px;
 		    top: -60px;
-		    left: 57%;
+		    right: 10%;
 		}
 		.nogi {
 			background: #fff url(/images/nogi.png) center bottom no-repeat;
@@ -770,6 +764,14 @@ h5 {
 		.icon {
 			background: url(/images/Polygon.png) center no-repeat;
 		}
+	}
+}
+
+@media (max-width: 991px) {
+	.gallery {
+		img {
+		    width: calc(50% - 15px);
+		} 
 	}
 }
 
