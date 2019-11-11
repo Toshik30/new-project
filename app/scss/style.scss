@@ -263,6 +263,8 @@ h5 {
 			margin: 60px 0;
 			box-shadow: 6px -4px 20px -10px;
 		}
+	}
+}
 		.love {
 			&:before { // move all cascades to scss
 				content: "";
@@ -301,8 +303,6 @@ h5 {
 			}
 		}
 
-	}
-}
 .wanna-go {
 	padding: 140px 0;
 	background: url(/images/elkablur.png)92% 100%/449px no-repeat,url(/images/Layer_10_copy.png)100% 100%/188px no-repeat, url(/images/elka.png)75% 100%/269px no-repeat, url(/images/gori.png)left bottom/ calc(60% - -100px) no-repeat, #f6f4f4;
@@ -681,6 +681,7 @@ h5 {
 @media  (max-width: 768px) {
 	section {
 		    margin-right: -50px;
+		    padding: 20px 0;
 	}
 	header {
 		padding: 0;
@@ -718,8 +719,8 @@ h5 {
 
 		.curves {
 			background: #fff url(/images/Curves.png)center center no-repeat;
-		    height: 440px;
-		    width: 440px;
+		    height: 350px;
+		    width: 352px;
 		    top: -60px;
 		    left: 57%;
 		}
@@ -734,6 +735,42 @@ h5 {
 		}
 	}
 
+	.journal {
+		.container {
+			padding: 0;
+		}
+
+		.love {
+			&:before {
+				content: "";
+				left: 97%;
+				top: 12%;
+			}
+		}
+		.water, .tree {
+			&:before {
+				top: 12%;
+    			left: 97%;
+			}
+		}
+	}
+	.work {
+		.row {
+			&:before {
+			width: calc(100% - 176px);
+			left: 87px;
+			}
+		}
+		.col-md-2 {
+			&:after {
+				content: "";
+				left: 21px;
+			}
+		}
+		.icon {
+			background: url(/images/Polygon.png) center no-repeat;
+		}
+	}
 }
 
 
