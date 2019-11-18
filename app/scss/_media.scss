@@ -1,0 +1,120 @@
+@media (max-width: 576px) {
+	.container {
+    		max-width: 100%; 
+		}
+}
+
+@media (max-width: 768px) {
+	section {
+		    padding: 20px 0;
+	}
+	header {
+		padding: 0;
+	}
+	.head {
+	   background: url(/images/background_image.png) center bottom/1382px no-repeat;
+
+	   .stab {
+	   		padding: 50px 0 ;
+	   }
+	   .order {
+	   		padding: 5px 10px;
+
+	   		button {
+		   		padding: 1em 55px;
+    			margin-bottom: 10px;
+			}
+	   }
+	   .travel {
+	   		h1 {
+	   			font-size: 	40px;
+	   			margin: 10px;
+	   			p {
+	   				font-size: 	50px;
+	   				margin: -25px 0;
+	   			}
+   			}
+		   	p {
+		   		margin: 25px 0;
+		   	}
+		}
+	}
+		.about-us {
+		background: url(/images/vector.png) calc(50% + 80px) calc(50% + -5px) no-repeat,#f6f4f4;
+
+		.curves {
+			background: #fff url(/images/Curves.png)center center no-repeat;
+		    height: 350px;
+		    width: 352px;
+		    top: -60px;
+		    right: 1%;
+		}
+		.nogi {
+			background: #fff url(/images/nogi.png) center bottom no-repeat;
+			height: 220px;
+			width: 220px;
+			top: 210px;
+		}
+		.container {
+			min-height: 540px;
+		}
+	}
+
+	.journal {
+		.container {
+			padding: 0;
+			.row {
+				margin: 18px 2px -18px;
+			}
+		}
+
+		.love {
+			&:before {
+				content: "";
+				left: 98%;
+				top: 12%;
+			}
+		}
+		.water, .tree {
+			&:before {
+				top: 12%;
+    			left: 98%;
+			}
+		}
+	}
+	.work {
+		.row {
+			&:before {
+			width: calc(100% - 176px);
+			left: 87px;
+			}
+		}
+		.col-md-2 {
+			&:after {
+				content: "";
+				left: 21px;
+			}
+		}
+		.icon {
+			min-width: 100px;
+			min-height: 100px;
+		}
+
+	}
+
+	.travel-us {
+		.col-md-6 {
+		        display: flex;
+		    	justify-content: center;
+		    	margin-top: 20px;
+		}
+	}
+}
+
+@media (max-width: 991px) {
+	.gallery {
+		img {
+		    width: calc(50% - 15px);
+		} 
+	}
+}
