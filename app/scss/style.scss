@@ -9,8 +9,11 @@ body {
 section {
 	padding: 70px 0; // replace with padding
 }
-input {
-	outline:none;
+.form-control:focus {
+	box-shadow: none;
+}
+.btn, .btn-primary:focus {
+	box-shadow: none;
 }
 
 h2, h3 {
@@ -71,6 +74,7 @@ h5 {
 .btn-outline-primary {
     color: $base-color;
 	border: 3px solid $base-color;
+	outline:none;
 }
 
 .btn-primary {
@@ -84,6 +88,22 @@ h5 {
 .head {
 	background: url(/images/background_image.png) center top / 2250px no-repeat; //make more lighter
 	padding: 0;
+	
+	.nav-link {
+		position: relative;
+	}
+	.nav-link:hover {
+
+			&:before {
+			content: "";
+		    width: 80% ;
+		    height: 1.5px;
+		    top: 25px;
+			border: none;
+			background-color: rgba(0,0,0,.5);
+		    position: absolute;
+			}
+	}
 	
 	header {
 		background-color: rgba(245, 245, 245, 0.23);
@@ -157,7 +177,7 @@ h5 {
     			font-family: "Euphoria";
     			color: $base-color;
     			font-size: 66px;
-    			margin: -33px 0;
+    			line-height: 5px;
     			letter-spacing: 0;
     			text-transform: none;
     			font-weight: 600;
@@ -198,7 +218,7 @@ h5 {
 	    width: 806px;
 	    position: absolute;
 	    top: -45px;
-	    right: 10%;
+	    right: 0;
 	}
 
 	.nogi {
@@ -305,7 +325,7 @@ h5 {
 .wanna-go {
 	padding: 140px 0;
 	background: url(/images/elkablur.png)92% 100%/449px no-repeat,url(/images/Layer_10_copy.png)100% 100%/188px no-repeat, url(/images/elka.png)75% 100%/269px no-repeat, url(/images/gori.png)left bottom/ calc(60% - -100px) no-repeat, #f6f4f4;
-
+	
     .container {
     	height: 350px;
 
@@ -316,6 +336,10 @@ h5 {
 
     	.input-group {
 			width: 75%;
+
+			&:focus {
+				outline: none;
+			}
 		}
 
 		.form-control {
@@ -557,9 +581,6 @@ h5 {
     }
 }
 
-
-   
-
     	.write-info {
 					width: 515px;
 					padding: 20px 0 40px;
@@ -609,8 +630,6 @@ h5 {
     	margin-bottom: 60px;
     }
 
-
-
 .footer {
 	background: url(/images/bg.png) center calc(100% + 100px)/120% 3000px no-repeat;
 
@@ -637,31 +656,21 @@ h5 {
 	.messagers {
 		display: flex;
 
-		.tw {
-			background-color: #29c5f6;
+		.vk, .fb, .tw {
 			width: 40px;
 			height: 41px;
+		}
+
+		.tw {
+			background: url(/images/twitter.png) 66% 61% no-repeat  #29c5f6;
 			margin-right: 3px;
-			display: flex;
-		    align-items: center;
-		    justify-content: center;
 		}
 		.fb  {
-			background-color:  #6788ce;
-			width: 40px;
-			height: 41px;
+			background: url(/images/fbook.png) 59% 65% no-repeat  #6788ce;
 			margin-right: 3px;
-			display: flex;
-		    align-items: center;
-		    justify-content: center;
 		}
 		.vk {  
-			background-color: #54769a;
-			width: 40px;
-			height: 41px;
-			display: flex;
-		    align-items: center;
-		    justify-content: center;
+			background: url(/images/vk.png) 46% 56% no-repeat #54769a;
 		}
 
 	}

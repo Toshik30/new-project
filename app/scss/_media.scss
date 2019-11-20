@@ -31,11 +31,11 @@
 	   			margin: 10px;
 	   			p {
 	   				font-size: 	50px;
-	   				margin: -25px 0;
+	   				margin:  0px;
 	   			}
    			}
 		   	p {
-		   		margin: 25px 0;
+		   		margin: 25px 0px 15px 12px;
 		   	}
 		}
 	}
@@ -47,7 +47,6 @@
 		    height: 350px;
 		    width: 352px;
 		    top: -60px;
-		    right: 1%;
 		}
 		.nogi {
 			background: #fff url(/images/nogi.png) center bottom no-repeat;
@@ -96,16 +95,15 @@
 			}
 		}
 		.icon {
-			min-width: 100px;
-			min-height: 100px;
+			height: 120px;
+		    background: url(/images/Polygon.png) center/70px no-repeat,#f0f3f6;
+		    margin: 55px 0 20px;
 		}
 
 	}
 
 	.travel-us {
-		.col-md-6 {
-		        display: flex;
-		    	justify-content: center;
+		.col-md-4 {
 		    	margin-top: 20px;
 		}
 	}
